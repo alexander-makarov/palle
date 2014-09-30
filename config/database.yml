@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: palle_development
+  username: tankard
+  password:
+  host: localhost
+
+test:
+  <<: *default
+  database: palle_test
+  username: tankard
+  password:
+  host: localhost
